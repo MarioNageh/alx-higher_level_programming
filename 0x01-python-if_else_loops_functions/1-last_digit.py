@@ -11,6 +11,6 @@ s4 = f"Last digit of {number} is {last}"
 if last > 5:
     print(f"{s4} {s1}")
 elif last == 0:
-	print(f"{s4}")
+    print(f"{s4}")
 elif last < 6:
     print(f"{s4} {s2}")

@@ -12,5 +12,5 @@ if last > 5:
     print(f"{s4}{s1}")
 elif last < 6:
     print(f"{s4}{s2}")
-else:
+elif last == 0:
     print(f"{s4}{s3}")

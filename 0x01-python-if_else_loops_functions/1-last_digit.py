@@ -7,10 +7,10 @@ if number < 0:
 s1 = "and is greater than 5"
 s2 = "and is less than 6 and not 0"
 s3 = "and is 0"
-s4 = f"Last digit of {number} is {last} "
+s4 = f"Last digit of {number} is {last}"
 if last > 5:
-    print(f"{s4}{s1}")
-elif last < 6:
-    print(f"{s4}{s2}")
+    print(f"{s4} {s1}")
 elif last == 0:
-    print(f"{s4}{s3}")
+	print(f"{s4}")
+elif last < 6:
+    print(f"{s4} {s2}")

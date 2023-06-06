@@ -8,9 +8,9 @@ s1 = "and is greater than 5"
 s2 = "and is less than 6 and not 0"
 s3 = "and is 0"
 s4 = f"Last digit of {number} is {last} "
-if number > 5:
+if last > 5:
     print(f"{s4}{s1}")
-elif number < 6:
+elif last < 6:
     print(f"{s4}{s2}")
 else:
     print(f"{s4}{s3}")

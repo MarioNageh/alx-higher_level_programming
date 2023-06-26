@@ -1,21 +1,16 @@
 #!/usr/bin/python3
 
-import dis
-
-
 def magic_calculation(a, b):
     result = 0
+
     for i in range(1, 3):
         try:
             if i > a:
                 raise Exception('Too far')
-            else:
-                result += a ** b / i
-        except Exception as a:
-            result = b + a
+        except Exception:
+            result = a + b
             break
-    return (result)
+        else:
+            result += (a ** b) / i
 
-bytecode = dis.Bytecode(magic_calculation)
-for instr in bytecode:
-    print(instr.opname)
+    return result

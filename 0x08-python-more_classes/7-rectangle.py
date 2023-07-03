@@ -116,8 +116,8 @@ class Rectangle:
         """
         if self.check_if_zero_dimention():
             return ""
-        rec = (f"{Rectangle.print_symbol}" * self.width + '\n') * \
-            (self.height - 1) + (self.width * f"{Rectangle.print_symbol}")
+        rec = (f"{self.print_symbol}" * self.width + '\n') * \
+            (self.height - 1) + (self.width * f"{self.print_symbol}")
         return rec
 
     def __repr__(self):

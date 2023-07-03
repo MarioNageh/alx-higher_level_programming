@@ -1,0 +1,21 @@
+>>> Rectangle = __import__('2-rectangle').Rectangle
+>>> rec = Rectangle(2,4)
+>>> rec.__dict__
+{'_Rectangle__width': 2, '_Rectangle__height': 4}
+>>> rec.width = 3
+>>> rec.height = 10
+>>> rec.__dict__
+{'_Rectangle__width': 3, '_Rectangle__height': 10}
+>>> rec.height = ""
+Traceback (most recent call last):
+TypeError: height must be an integer
+>>> rec.width = ""
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> rec = Rectangle(2, 4)
+>>> print(rec)
+##
+##
+##
+##

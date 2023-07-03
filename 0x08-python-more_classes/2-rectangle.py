@@ -90,6 +90,13 @@ class Rectangle:
         """
         return self.width * self.height
 
+    def check_if_zero_dimention(self):
+        """
+        Returns: False if any of dimention = 0
+            else True
+        """
+        return self.width == 0 or self.height == 0
+
     def perimeter(self):
         """
         Returns: the perimeter of Rectanglue
@@ -97,3 +104,12 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return (self.width + self.height) * 2
+
+    def __str__(self):
+        """
+        Returns: string representation of Rectangle
+        """
+        if self.check_if_zero_dimention():
+            return ""
+        rec = ("#" * self.width + '\n') * (self.height - 1) + (self.width * "#")
+        return rec

@@ -4,7 +4,9 @@
 
 class Rectangle:
     """
-    this is Rectangle class
+    this is Rectangle class with private instance width
+    height
+
     Args:
         width (int): the width of rectagle
         height (int): the height of rectagle
@@ -17,9 +19,11 @@ class Rectangle:
     def check_valid_dimention(property, value):
         """
         this function to check validty of dimention
+
         Args:
             property (str): string of property name
             value (int): value of dimention
+
         Raises:
             TypeError: If `value` is not an int.
             ValueError: If `value` is less than 0.
@@ -32,16 +36,20 @@ class Rectangle:
     @property
     def width(self):
         """__width getter.
+
         Returns:
             __width (int): horizontal dimension of rectangle
+
         """
         return self.__width
 
     @property
     def height(self):
         """__height getter.
+
         Returns:
             __height (int): vertical dimension of rectangle
+
         """
         return self.__height
 
@@ -49,11 +57,14 @@ class Rectangle:
     def width(self, value):
         """Args:
             value (int): horizontal dimension of rectangle
+
         Attributes:
             __width (int): horizontal dimension of rectangle
+
         Raises:
             TypeError: If `value` is not an int.
             ValueError: If `value` is less than 0.
+
         """
         self.check_valid_dimention("width", value)
         self.__width = value

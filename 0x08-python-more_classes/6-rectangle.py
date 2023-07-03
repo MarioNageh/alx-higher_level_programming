@@ -3,7 +3,6 @@
 
 
 class Rectangle:
-    number_of_instances = 0
     """
     this is Rectangle class with private instance width
     height
@@ -12,6 +11,8 @@ class Rectangle:
         width (int): the width of rectagle
         height (int): the height of rectagle
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height

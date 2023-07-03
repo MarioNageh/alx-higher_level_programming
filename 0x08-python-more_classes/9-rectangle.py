@@ -145,7 +145,7 @@ class Rectangle:
             return rect_1
         return rect_2
 
-        @classmethod
+    @classmethod
     def square(cls, size=0):
         """square
         Args:

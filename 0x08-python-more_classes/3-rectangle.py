@@ -112,5 +112,5 @@ class Rectangle:
         if self.check_if_zero_dimention():
             return ""
         rec = ("#" * self.width + '\n') * \
-        (self.height - 1)+ (self.width * "#")
+            (self.height - 1) + (self.width * "#")
         return rec

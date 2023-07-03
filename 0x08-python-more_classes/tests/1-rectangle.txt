@@ -1,0 +1,4 @@
+>>> Rectangle = __import__('1-rectangle').Rectangle
+>>> rec = Rectangle(2,4)
+>>> rec.__dict__
+{'_Rectangle__width': 2, '_Rectangle__height': 4}

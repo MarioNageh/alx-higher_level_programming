@@ -15,7 +15,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @staticmethod
     def check_valid_dimention(property, value):
@@ -125,5 +125,5 @@ class Rectangle:
 
     def __del__(self):
         """print delete message"""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

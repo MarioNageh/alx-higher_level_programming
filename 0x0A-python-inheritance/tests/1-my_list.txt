@@ -1,0 +1,10 @@
+1-my_list.txt
+==============
+import the module:
+>>> Mylist = __import__("1-my_list").MyList
+>>> mylist = Mylist()
+>>> mylist.append('mario')
+Traceback (most recent call last):
+TypeError: You Must Insert Integer
+
+

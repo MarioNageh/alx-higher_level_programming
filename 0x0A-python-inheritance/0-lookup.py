@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module contains methods to look up for objects"""
+
+
 def lookup(obj):
     """
     this function returns All atributes of the given object

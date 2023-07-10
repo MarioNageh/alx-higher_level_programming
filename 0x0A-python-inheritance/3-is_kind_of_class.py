@@ -4,4 +4,4 @@
 
 def is_kind_of(obj, a_class):
     """Checks if the specified instance of Class"""
-    return isinstance(obj, a_class)
+    return type(obj) == a_class

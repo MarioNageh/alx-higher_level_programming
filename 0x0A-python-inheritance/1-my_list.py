@@ -1,7 +1,5 @@
 #!/bin/usr/python3
-"""This Module is New Class Instance of list
-with some functionality
-"""
+"""This Module is New Class Instance of list"""
 
 
 class MyList(list):

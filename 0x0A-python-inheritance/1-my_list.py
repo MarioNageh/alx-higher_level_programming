@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/urs/bin/python3
 """This Module is New Class Instance of list"""
 
 

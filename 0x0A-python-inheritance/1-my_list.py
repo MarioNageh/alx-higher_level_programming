@@ -11,3 +11,8 @@ class MyList(list):
     def print_sorted(self):
         """Prints the list in sorted order Ascending sorted order"""
         print(sorted(self))
+
+    def append(self, __object):
+        if not isinstance(__object, int):
+            raise TypeError("You Must Insert Integer")
+        return super().append(__object)

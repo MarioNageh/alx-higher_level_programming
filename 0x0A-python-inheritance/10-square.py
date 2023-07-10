@@ -2,6 +2,7 @@
 """This Is Square Module"""
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """This Is Square Class"""
 

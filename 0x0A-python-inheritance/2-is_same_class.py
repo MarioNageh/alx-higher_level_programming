@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""this Module check if object 
+"""this Module check if object
 is instance of specified class"""
 
 

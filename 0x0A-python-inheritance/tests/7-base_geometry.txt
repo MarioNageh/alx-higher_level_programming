@@ -55,7 +55,7 @@ Usage
 
 ::
 
-    >>> bg.integer_validator("my_int", 'salma')
+    >>> bg.integer_validator("my_int", 'mario')
     Traceback (most recent call last):
     TypeError: my_int must be an integer
 

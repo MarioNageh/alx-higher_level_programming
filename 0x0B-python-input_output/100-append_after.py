@@ -3,15 +3,12 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """
-    Insert a new string of after search string
-    """
-    with open(filename, 'r+') as file:
-        lines = file.readlines()
-        file.seek(0)
-
+    '''module Search and update
+    '''
+    with open(filename, 'r+') as f:
+        lines = f.readlines()
         for line in lines:
-            file.write(line)
+            f.write(line)
             if search_string in line:
-                file.write(new_string + '\n')
-        file.truncate()
+                f.write(new_string)
+                f.write('\n')

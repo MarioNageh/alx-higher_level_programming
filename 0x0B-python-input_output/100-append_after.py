@@ -14,4 +14,4 @@ def append_after(filename="", search_string="", new_string=""):
             file.write(line)
             if search_string in line:
                 file.write(new_string + '\n')
-    file.truncate()
+        file.truncate()

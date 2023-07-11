@@ -2,7 +2,6 @@
 """append after module"""
 
 
-
 def append_after(filename="", search_string="", new_string=""):
     """
     Insert a new string of after search string
@@ -15,4 +14,3 @@ def append_after(filename="", search_string="", new_string=""):
             file.write(line)
             if search_string in line:
                 file.write(new_string + '\n')
-    file.truncate()

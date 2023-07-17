@@ -88,3 +88,9 @@ class Rectangle(Base):
         """this is Rectangle String Representation"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y}"\
             f" - {self.width}/{self.height}"
+
+    def update(self,*args):
+        """this is updating using args"""
+        attr = ['id', 'width', 'height', 'x', 'y']
+        for index, value in enumerate(args):
+            setattr(self, attr[index], value)

@@ -72,3 +72,7 @@ class Rectangle(Base):
         """this is Rectangle Y Setter"""
         self.check_for_coordinates(value, "y")
         self.__y = value
+
+    def area(self):
+        """this is Rectangle Area"""
+        return self.__width * self.__height

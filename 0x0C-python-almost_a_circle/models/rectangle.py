@@ -12,6 +12,23 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def check_for_type(self, value, attr):
+        """this checks for value is int"""
+        if type(value) != int:
+            raise TypeError(f"{attr} must be an integer")
+
+    def check_for_dimensions(self, value, attr):
+        """this checks dimensions"""
+        self.check_for_type(value, attr)
+        if value <= 0:
+            raise ValueError(f"{attr} must be > 0")
+
+    def check_for_coordinates(self, value, attr):
+        """this checks for coordinates values if int and >= 0"""
+        self.check_for_type(value, attr)
+        if value < 0:
+            raise ValueError(f"{attr} must be >= 0")
+
     @property
     def width(self):
         """this is Rectangle Width"""
@@ -20,6 +37,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """this is Rectangle Width Setter"""
+        self.check_for_dimensions(value, "width")
         self.__width = value
 
     @property
@@ -30,6 +48,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """this is Rectangle Height Setter"""
+        self.check_for_dimensions(value, "height")
         self.__height = value
 
     @property
@@ -40,6 +59,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """this is Rectangle X Setter"""
+        self.check_for_coordinates(value, "x")
         self.__x = value
 
     @property
@@ -50,4 +70,5 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """this is Rectangle Y Setter"""
+        self.check_for_coordinates(value, "y")
         self.__y = value

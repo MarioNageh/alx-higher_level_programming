@@ -30,3 +30,10 @@ class Base:
             data = [x.to_dictionary() for x in list_objs]
         with open(f"{cls.__name__}.json", "w") as outfile:
             outfile.write(cls.to_json_string(data))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """this function converts and returns a dictionary representation"""
+        if not json_string:
+            return []
+        return [json.loads(json_string)]

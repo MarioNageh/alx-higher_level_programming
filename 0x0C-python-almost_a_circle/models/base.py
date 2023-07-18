@@ -36,4 +36,16 @@ class Base:
         """this function converts and returns a dictionary representation"""
         if not json_string:
             return []
-        return [json.loads(json_string)]
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        ''' create object and update it with dictionary '''
+        if cls.__name__ == 'Rectangle':
+            obj = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            obj = cls(1)
+        else:
+            return None
+        obj.update(**dictionary)
+        return obj

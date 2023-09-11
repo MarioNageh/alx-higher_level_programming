@@ -5,6 +5,7 @@ const findSecondBiggest = (args) => {
   let secondBiggest = Number.MIN_VALUE;
 
   for (let i = 2; i < args.length; i++) {
+    args[i] = parseInt(args[i]);
     if (args[i] > biggest) {
       secondBiggest = biggest;
       biggest = args[i];

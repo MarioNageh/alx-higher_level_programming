@@ -6,3 +6,5 @@ env/
 *__pycache__
 .vscode
 ./vscode
+0x12-javascript-warm_up/node_modules
+0x12-javascript-warm_up/package-lock.json

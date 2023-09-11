@@ -4,6 +4,6 @@
     "semistandard": "*"
   },
   "scripts": {
-    "check": "semistandard"
+    "test": "semistandard"
   }
 }

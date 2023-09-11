@@ -1,10 +1,21 @@
 #!/usr/bin/node
 const args = process.argv;
-const size = parseInt(args[2]);
-const factorial = (n) => {
-  if (n === 0 || Number.isNaN(n)) {
-    return 1;
+const findSecondBiggest = (args) => {
+  let biggest = Number.MIN_VALUE;
+  let secondBiggest = Number.MIN_VALUE;
+
+  for (let i = 2; i < args.length; i++) {
+    if (args[i] > biggest) {
+      secondBiggest = biggest;
+      biggest = args[i];
+    } else if (args[i] > secondBiggest && args[i] < biggest) {
+      secondBiggest = args[i];
+    }
   }
-  return n * factorial(n - 1);
+  return secondBiggest;
 };
-console.log(factorial(size));
+if (args.length <= 3) {
+  console.log(0);
+} else {
+  console.log(findSecondBiggest(args));
+}

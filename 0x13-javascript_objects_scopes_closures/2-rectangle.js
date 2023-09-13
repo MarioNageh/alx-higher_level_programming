@@ -9,7 +9,7 @@ class Rectangle {
   }
 
   checkForANumber (value) {
-    if (isNaN(value) || value <= 0) {
+    if (isNaN(value) || value <= 0 || typeof value !== 'number') {
       return false;
     }
   }

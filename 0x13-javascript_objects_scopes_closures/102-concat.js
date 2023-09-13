@@ -11,7 +11,7 @@ try {
 }
 
 try {
-  const data = fs.readFileSync(process.argv[3], 'tf8');
+  const data = fs.readFileSync(process.argv[3], 'utf8');
   fileTwo = data;
 } catch (err) {
   console.error(err);

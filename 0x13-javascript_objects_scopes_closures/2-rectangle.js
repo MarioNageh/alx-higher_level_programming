@@ -9,9 +9,10 @@ class Rectangle {
   }
 
   checkForANumber (value) {
-    if (isNaN(value) || value <= 0 || typeof value !== 'number') {
+    if (value <= 0 || typeof value !== 'number') {
       return false;
     }
+    return true;
   }
 }
 module.exports = Rectangle;

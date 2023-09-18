@@ -21,7 +21,11 @@ if __name__ == "__main__":
         order by cities.id asc
     ''', (name_to_search, ))
     rows = cur.fetchall()
+    flag = -1
+
     for row in rows:
-        print(row)
+        print(("" if flag == -1 else ", ") + row[1], end="")
+        flag = 1
+    print("")
     cur.close()
     db.close()

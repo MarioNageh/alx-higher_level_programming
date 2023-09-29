@@ -2,18 +2,28 @@
 """Find a peak in a list of unsorted integers."""
 
 def find_peak(list_of_integers):
-    """
-    Find Biggest Number That Before and After Below This
-    or Equals
-    """
-    
-    current_max_peak = None
-    for i in range (0,len(list_of_integers) - 1):
-        if list_of_integers[i] >= list_of_integers[i+1]:
-            if i == 0 or  list_of_integers[i] >= list_of_integers[i-1]:
-                if not current_max_peak:
-                    current_max_peak = list_of_integers[i]
-                else:
-                    current_max_peak = max(current_max_peak,list_of_integers[i])
-    return current_max_peak
 
+    if list_of_integers is None or len(list_of_integers) == 0:
+        return None
+
+    if len(list_of_integers) == 1:
+        return list_of_integers[0]
+
+    mid_idx = int(len(list_of_integers) / 2)
+
+    if mid_idx != len(list_of_integers) - 1:
+        if list_of_integers[mid_idx - 1] < list_of_integers[mid_idx] and\
+           list_of_integers[mid_idx + 1] < list_of_integers[mid_idx]:
+            return list_of_integers[mid_idx]
+    else:
+        if list_of_integers[mid_idx - 1] < list_of_integers[mid_idx]:
+            return list_of_integers[mid_idx]
+        else:
+            return list_of_integers[mid_idx - 1]
+
+    if list_of_integers[mid_idx - 1] > list_of_integers[mid_idx]:
+        a_list = list_of_integers[0:mid_idx]
+    else:
+        a_list = list_of_integers[mid_idx + 1:]
+
+    return find_peak(a_list)

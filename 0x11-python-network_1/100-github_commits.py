@@ -13,9 +13,6 @@ if __name__ == "__main__":
     response = requests.get(url, headers=headers)
     body = response.json()
     body = body[:10]
-    try:
-        for commit in body:
-            print(commit.get("sha"), end=": ")
-            print(commit.get("commit").get("author").get("name"))
-    except Exception as e:
-        pass
+    for commit in body:
+        print(f'{commit.get("sha")}: '
+              f'{commit.get("commit").get("author").get("name")}')

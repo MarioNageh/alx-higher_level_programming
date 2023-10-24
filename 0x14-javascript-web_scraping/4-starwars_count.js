@@ -1,0 +1,10 @@
+#!/usr/bin/node
+// get status of url
+const request = require('request');
+const url = process.argv[2];
+request.get(url, (error, response, body) => {
+  if (!error) {
+    const count = body.split('/people/18/').length - 1;
+    console.log(count);
+  }
+});

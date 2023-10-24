@@ -13,4 +13,3 @@ if (process.argv.length > 3) {
     }
   });
 }
-
